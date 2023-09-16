@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@android:color/holo_purple">
+    android:background="@color/background">
 
 
     <FrameLayout
@@ -14,10 +14,9 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/background"
         app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </FrameLayout>
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -26,5 +25,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu"/>
+        android:background="@color/menu_background"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemTextColor="@drawable/icon_selection_color_change"
+        app:itemIconTint="@drawable/icon_selection_color_change"
+        app:itemRippleColor="@color/menu_background"
+        app:itemActiveIndicatorStyle="@color/white"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,26 +7,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="@color/background"
     tools:context=".DashboardFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/light_black"
+        android:hint="Search"
+        android:textColorHint="@color/light_white"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
     <!-- Vertical LinearLayout for Cryptocurrencies -->
     <LinearLayout
         android:id="@+id/cryptoList"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/background"
+        app:layout_constraintTop_toBottomOf="@+id/textField"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"> <!-- Set bottom constraint to the bottom of the parent -->
+        app:layout_constraintBottom_toBottomOf="parent">
         <!-- Crypto 1 -->
         <LinearLayout
             android:id="@+id/crypto1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@android:color/white"
+            android:background="@drawable/backgroundlinear"
             android:padding="16dp">
 
             <LinearLayout
@@ -40,6 +68,7 @@
                     android:layout_height="wrap_content"
                     android:text="BTC"
                     android:textSize="18sp"
+                    android:textColor="@color/light_white"
                     android:textStyle="bold"/>
 
                 <TextView
@@ -47,6 +76,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Bitcoin"
+                    android:textColor="@color/type_money"
                     android:textSize="14sp"/>
             </LinearLayout>
 
@@ -62,6 +92,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Price: $45,000"
+                    android:textColor="@color/light_white"
                     android:textSize="14sp"/>
 
                 <TextView
@@ -69,7 +100,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Change: +$200 (2%)"
-                    android:textSize="14sp"/>
+                    android:textColor="@color/changeup"
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <!-- Add more cryptocurrency information as needed -->
@@ -82,7 +114,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@android:color/white"
+            android:background="@drawable/backgroundlinear"
+            android:layout_marginTop="18dp"
+
             android:padding="16dp">
 
             <LinearLayout
@@ -97,6 +131,7 @@
                     android:layout_height="wrap_content"
                     android:text="ETH"
                     android:textSize="18sp"
+                    android:textColor="@color/light_white"
                     android:textStyle="bold"/>
 
                 <TextView
@@ -104,6 +139,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Ethereum"
+                    android:textColor="@color/type_money"
                     android:textSize="14sp"/>
             </LinearLayout>
 
@@ -119,13 +155,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Price: $3,000"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp"
+                    android:textColor="@color/light_white"/>
 
                 <TextView
                     android:id="@+id/cryptoChange2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Change: -$50 (-1%)"
+
+                    android:textColor="@color/changedown"
                     android:textSize="14sp"/>
             </LinearLayout>
 
@@ -139,7 +178,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@android:color/white"
+            android:background="@drawable/backgroundlinear"
+            android:layout_marginTop="16dp"
             android:padding="16dp">
 
             <LinearLayout
@@ -154,6 +194,7 @@
                     android:layout_height="wrap_content"
                     android:text="ADA"
                     android:textSize="18sp"
+                    android:textColor="@color/light_white"
                     android:textStyle="bold"/>
 
                 <TextView
@@ -161,6 +202,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cardano"
+                    android:textColor="@color/type_money"
                     android:textSize="14sp"/>
             </LinearLayout>
 
@@ -176,14 +218,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Price: $2.50"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp"
+                    android:textColor="@color/light_white"/>
 
                 <TextView
                     android:id="@+id/cryptoChange3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Change: +$0.20 (2.5%)"
-                    android:textSize="14sp"/>
+                    android:textColor="@color/changeup"
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <!-- Add more cryptocurrency information as needed -->
@@ -196,7 +240,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@android:color/white"
+            android:background="@drawable/backgroundlinear"
+            android:layout_marginTop="16dp"
             android:padding="16dp">
 
             <LinearLayout
@@ -210,14 +255,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="XRP"
+                    android:textColor="@color/light_white"
                     android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/cryptoName4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Ripple (XRP)"
+                    android:textColor="@color/type_money"
                     android:textSize="14sp"/>
             </LinearLayout>
 
@@ -233,18 +280,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Price: $1.20"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp"
+                    android:textColor="@color/light_white"/>
 
                 <TextView
                     android:id="@+id/cryptoChange4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Change: -$0.05 (-4%)"
+                    android:textColor="@color/changedown"
                     android:textSize="14sp"/>
             </LinearLayout>
 
             <!-- Add more cryptocurrency information as needed -->
 
+
+
         </LinearLayout>
+
+
+        <!-- Add more cryptocurrency information as needed -->
+
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

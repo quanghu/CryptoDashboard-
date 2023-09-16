@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="light_black">#34414a</color>
+    <color name="light_white">#e0e3e3</color>
+    <color name="type_money">#636d74</color>
+    <color name="changedown">#964965</color>
+    <color name="changeup">#4ac6ae</color>
+    <color name="background">#29353d</color>
+    <color name="menu_background">#1d262f</color>
+
 </resources>
