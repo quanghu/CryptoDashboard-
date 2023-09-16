@@ -4,12 +4,13 @@
     <item android:title="Dashboard"
         android:id="@+id/Dashboard"
         android:icon="@drawable/baseline_dashboard_24"
+
         />
     <item android:title="Account"
         android:id="@+id/Account"
         android:icon="@drawable/baseline_person_24"
         />
-    <item android:title="Setting"
+    <item android:title="data"
         android:id="@+id/Setting"
         android:icon="@drawable/baseline_settings_24"
         />
