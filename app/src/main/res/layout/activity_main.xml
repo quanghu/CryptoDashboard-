@@ -28,5 +28,7 @@
         android:background="@color/menu_background"
         app:menu="@menu/bottom_nav_menu"
         app:itemTextColor="@drawable/icon_selection_color_change"
-        app:itemIconTint="@drawable/icon_selection_color_change"/>
+        app:itemIconTint="@drawable/icon_selection_color_change"
+        app:itemRippleColor="@color/menu_background"
+        app:itemActiveIndicatorStyle="@color/white"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
