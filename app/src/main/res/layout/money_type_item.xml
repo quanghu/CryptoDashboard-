@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- money_type_item.xml -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/menu_background"
+    android:padding="16dp"
+    android:layout_margin="8dp">
+
+    <!-- Left Side: Symbol and Name -->
+<LinearLayout
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:orientation="vertical">
+
+<!-- Money Type Symbol -->
+<TextView
+    android:id="@+id/moneyTypeSymbol"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="18sp"
+    android:textStyle="bold" />
+
+<!-- Money Type Name -->
+<TextView
+    android:id="@+id/moneyTypeName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="14sp" />
+</LinearLayout>
+
+    <!-- Right Side: Price and Change -->
+<LinearLayout
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:orientation="vertical">
+
+<!-- Money Type Price -->
+<TextView
+    android:id="@+id/moneyTypePrice"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="14sp" />
+
+<!-- Money Type Change -->
+<TextView
+    android:id="@+id/moneyTypeChange"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="14sp" />
+</LinearLayout>
+    </LinearLayout>
