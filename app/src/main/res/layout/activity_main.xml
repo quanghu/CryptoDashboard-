@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@android:color/holo_purple">
+    android:background="@color/background">
 
 
     <FrameLayout
@@ -26,5 +26,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:background="@color/menu_background"
-        app:menu="@menu/bottom_nav_menu"/>
+        app:menu="@menu/bottom_nav_menu"
+        app:itemTextColor="@drawable/icon_selection_color_change"
+        app:itemIconTint="@drawable/icon_selection_color_change"
+        app:itemRippleColor="@color/menu_background"
+        app:itemActiveIndicatorStyle="@color/white"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
